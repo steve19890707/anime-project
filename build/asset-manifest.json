@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/anime-project/static/js/main.dfe74d3e.chunk.js",
-    "main.js.map": "/anime-project/static/js/main.dfe74d3e.chunk.js.map",
+    "main.js": "/anime-project/static/js/main.e8f350d8.chunk.js",
+    "main.js.map": "/anime-project/static/js/main.e8f350d8.chunk.js.map",
     "runtime-main.js": "/anime-project/static/js/runtime-main.e11684ef.js",
     "runtime-main.js.map": "/anime-project/static/js/runtime-main.e11684ef.js.map",
-    "static/js/2.e5b36eaa.chunk.js": "/anime-project/static/js/2.e5b36eaa.chunk.js",
-    "static/js/2.e5b36eaa.chunk.js.map": "/anime-project/static/js/2.e5b36eaa.chunk.js.map",
+    "static/js/2.f6add2e3.chunk.js": "/anime-project/static/js/2.f6add2e3.chunk.js",
+    "static/js/2.f6add2e3.chunk.js.map": "/anime-project/static/js/2.f6add2e3.chunk.js.map",
     "index.html": "/anime-project/index.html",
-    "precache-manifest.857e7fcf7bff5f59b6f88348be3973fb.js": "/anime-project/precache-manifest.857e7fcf7bff5f59b6f88348be3973fb.js",
+    "precache-manifest.e6636d00d0f1aeefdfe5595c51f113ff.js": "/anime-project/precache-manifest.e6636d00d0f1aeefdfe5595c51f113ff.js",
     "service-worker.js": "/anime-project/service-worker.js",
-    "static/js/2.e5b36eaa.chunk.js.LICENSE.txt": "/anime-project/static/js/2.e5b36eaa.chunk.js.LICENSE.txt"
+    "static/js/2.f6add2e3.chunk.js.LICENSE.txt": "/anime-project/static/js/2.f6add2e3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e11684ef.js",
-    "static/js/2.e5b36eaa.chunk.js",
-    "static/js/main.dfe74d3e.chunk.js"
+    "static/js/2.f6add2e3.chunk.js",
+    "static/js/main.e8f350d8.chunk.js"
   ]
 }
