@@ -2,7 +2,6 @@ import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
 import anime from "animejs";
 
-
 const StyleHome = styled.div`
   width:1000px;
   margin: 0 auto;
@@ -27,7 +26,7 @@ export default ({location: { pathname }})=> {
   const animeBox = useRef(null);
   useEffect(()=>{
     anime.timeline({
-      easing: 'easeInOutQuad',
+      easing: 'easeInOutBack',
       duration: 800,
       loop: true
     })
@@ -63,23 +62,7 @@ export default ({location: { pathname }})=> {
   return (
     <StyleHome>
       <div className="title">this is <span>{locationName[1].toUpperCase()}</span></div>
-      <div className="animeBox" 
-        ref={animeBox}
-        // onMouseOver={()=>{
-        //   anime({
-        //     targets: animeBox.current,
-        //     translateX: [0,200],
-        //     duration: 1000,
-        //   });
-        // }}
-        // onMouseLeave={()=>{
-        //   anime({
-        //     targets: animeBox.current,
-        //     translateX: [200,0],
-        //     duration: 1000,
-        //   });
-        // }}
-      />
+      <div className="animeBox" ref={animeBox} />
     </StyleHome>
   );
 };

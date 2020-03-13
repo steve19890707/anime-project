@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useMemo } from "react";
 import styled from "styled-components";
+import anime from "animejs";
 import { GiDivingHelmet } from "react-icons/gi";
 import { Link } from "react-router-dom";
 
@@ -18,11 +19,12 @@ const StyleHeader = styled.header`
     align-items:center;
     justify-content:space-between;
   };
+  .logo { cursor: pointer; }
   .svg-logo {
     fill:#00e5fb;
     width:40px;
     height:40px;
-    cursor: pointer;
+    pointer-events:none;
   }
   .link-list {
     display:flex;
@@ -31,9 +33,7 @@ const StyleHeader = styled.header`
       color:#fff;
       font-size:14px;
       margin-right:20px;
-      transition:.2s;
       cursor: pointer;
-      &:hover { opacity:0.6; }
       &:last-child { margin-right:0; }
     };
     a { 
@@ -44,14 +44,51 @@ const StyleHeader = styled.header`
   };
 `
 export default ()=> {
+  const CreateHeaderList = useMemo(()=>{
+    const headerList = [ "home","about","other" ];
+    return headerList.map((value,index)=>{
+      const linkHerf = `/${value}`
+      return (
+        <li key={index}>
+          <Link 
+            to={linkHerf}
+            onClick={(e)=>{
+              anime.timeline({
+                targets: e.target,
+              }).add({
+                translateY:[0,-10],
+                easing: 'linear',
+                duration: 100
+              }).add({
+                translateY:[-10,0],
+                easing: 'easeOutBounce',
+                duration: 900
+              })
+            }}
+          >{value.toUpperCase()}</Link>
+        </li>
+      );
+    });
+  },[]);
   return (
     <StyleHeader>
       <div className="wrap">
-        <GiDivingHelmet className="svg-logo"/>
-        <ul className="link-list">
-          <li ><Link to="/home">HOME</Link></li>
-          <li ><Link to="/other">OTHER</Link></li>
-        </ul>
+        <div 
+          className="logo"
+          onClick={(e)=>{
+            anime({
+              targets: e.target,
+              rotate: {
+                value: [0,360],
+                duration: 800,
+                easing: 'easeOutBack',
+              }
+            })
+          }}
+        >
+          <GiDivingHelmet className="svg-logo"/>
+        </div>
+        <ul className="link-list">{CreateHeaderList}</ul>
       </div>
     </StyleHeader>
   )
